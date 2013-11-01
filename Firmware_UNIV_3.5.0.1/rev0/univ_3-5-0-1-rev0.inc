@@ -20,9 +20,6 @@
 ;==============================================================================
 ;                         PROJECT REGISTER DEFINITIONS
 ;==============================================================================
-;CONFIG0 - Enable module feature register: (value '1' enables '0' disables)
-;           bit<0> - enable IR receiver
-
 R0            EQU   H'0000'     ;Status_LearntCode routine
 Timer0_1000ms EQU   H'0002'     ;timer interrupt occurred flag
 

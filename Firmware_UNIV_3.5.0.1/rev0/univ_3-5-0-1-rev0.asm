@@ -49,7 +49,7 @@ INCLUDEDFILES   code
 ;===  FIRMWARE CHECKSUM  ======================================================
 ;==============================================================================
 FIRMCHKSM   code    0x001000
-    DB      0x62, 0xbf, 0xeb, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF			
+    DB      0x62, 0xbc, 0x05, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF			
 ;==============================================================================
 ;===  FIRMWARE ID  ============================================================
 ;==============================================================================
@@ -494,9 +494,6 @@ EndStatus_LearntCarrier
 ;                   recognizes it by the code header and forms CAN message.
 ;------------------------------------------------------------------------------
 IR_ReceiveCode
-        banksel CONFIG0
-        btfss   CONFIG0,0                   ;IR receiver enabled in config?
-    return                                  ;no, so exit
         btfsc   IRINPORT,IRINPIN            ;impulse present?
     return                                  ;no, so exit
 
